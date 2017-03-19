@@ -5,7 +5,7 @@ define(function () {
 
   window.app = window.app || {};
 
-  var namespace = {
+  return {
 
     append: function (key, obj) {
       if (typeof key !== "string") {
@@ -26,7 +26,5 @@ define(function () {
     }
 
   };
-
-  return namespace;
 
 });
