@@ -1,0 +1,1 @@
+define(["require","jquery","OpenLayers","osgeoWMS","namespace"],function(e){"use strict";var a=e("jquery"),n=e("OpenLayers"),r=new n.Map(a(".vmap.map")[0],{theme:null,numZoomLevels:20}),o=e("osgeoWMS"),p=e("namespace");return r.addLayer(o),r.zoomToMaxExtent(),p.append("map",r),r});

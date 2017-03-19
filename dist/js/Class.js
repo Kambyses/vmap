@@ -1,0 +1,1 @@
+define(["require","namespace"],function(e){"use strict";function t(){n.append(this)}var n=e("namespace");return t.extend=function(e){var p,r;r=Object.create(this.prototype);for(p in e.prototype)e.prototype.hasOwnProperty(p)&&(r[p]=e.prototype[p]);return e.prototype=r,e.extend=t.extend,n.append(e),e},n.append(t),t});

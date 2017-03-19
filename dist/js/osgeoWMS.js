@@ -1,0 +1,1 @@
+define(["require","OpenLayers","namespace"],function(e){"use strict";var a=e("OpenLayers"),s=e("namespace"),r=new a.Layer.WMS("OpenLayers WMS","http://vmap0.tiles.osgeo.org/wms/vmap0",{layers:"basic"});return s.append("osgeoWMS",r),r});
