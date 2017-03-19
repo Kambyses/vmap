@@ -131,7 +131,7 @@ module.exports = function (grunt) {
     var open, port;
     if (grunt.option("open-browser")) {
       open = require("open");
-      port = (grunt.option("server-port") === undefined) ? 9090 : grunt.option("server-port");
+      port = (grunt.option("server-port") === undefined) ? 9999 : grunt.option("server-port");
       open("http://127.0.0.1:" + port);
     }
   });
@@ -148,7 +148,7 @@ module.exports = function (grunt) {
     devRest = require("dev-rest-proxy");
     apiUrl  = grunt.option("api") === undefined ? "192.168.115.52" : grunt.option("api");
     apiPort = grunt.option("api-port") === undefined ? 80 : grunt.option("api-port");
-    serverPort = (grunt.option('server-port') === undefined) ? 9090 : grunt.option('server-port');
+    serverPort = (grunt.option('server-port') === undefined) ? 9999 : grunt.option('server-port');
 
     if (apiUrl === undefined) {
       grunt.fail.error("Api parameter has not been defined. ( i.e. --api=192.168.115.52 )");
@@ -172,7 +172,7 @@ module.exports = function (grunt) {
 
     if (moduleName === undefined) {
       app.use(express["static"]("src"));
-      app.get(["/bower_components/*", "/libs/*", "/modules/*", "/locales/*"], function (req, res) {
+      app.get(["/bower_components/*", "/libs/*", "/modules/*", "/locales/*", "/vendors/*"], function (req, res) {
         uri = url.parse(req.url).pathname;
         filePath = path.join(path.resolve("./"), uri);// jshint ignore:line
         res.sendFile(filePath);
