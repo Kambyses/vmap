@@ -19,7 +19,6 @@ define(function (require) {
   map.addLayer(layer);
   map.zoomToMaxExtent();
 
-
   $(".view-loader").hide();
 
 });
