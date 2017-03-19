@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Map</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link type="image/x-icon" rel="shortcut icon" href="img/favicon.png">
+
+<style>
+.vmap.app-loader.view-loader {
+  display:              block;
+  position:             absolute;
+  box-sizing:           border-box;
+  top:                  0;
+  left:                 0;
+  right:                0;
+  bottom:               0;
+  width:                100%;
+  height:               100%;
+  margin:               0;
+  background:           #3498db;
+  z-index:              1000;
+  pointer-events:       none;
+  transition:           opacity 0.2s linear 0.2s;
+}
+
+.vmap.app-loader:not(.hidden) ~ .vmap.layout {
+  visibility:           hidden;
+}
+
+.vmap.app-loader.view-loader svg {
+  display:              block;
+  position:             absolute;
+  top:                  50%;
+  left:                 50%;
+  width:                24px;
+  height:               24px;
+  margin:               -12px 0 0 -12px;
+  fill: #fff;
+  -webkit-animation:    vmap-loader-spin 1s linear infinite;
+  -moz-animation:       vmap-loader-spin 1s linear infinite;
+  animation:            vmap-loader-spin 1s linear infinite;
+}
+@-moz-keyframes    vmap-loader-spin { 100% { -moz-transform:    rotate(360deg); } }
+@-webkit-keyframes vmap-loader-spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes         vmap-loader-spin { 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); } }
+</style>
+
+</head>
+<body>
+
+<div class="vmap wrapper">
+  <div class="vmap sidebar"></div>
+  <div class="vmap map"></div>
+</div>
+
+<div class="vmap app-loader view-loader">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="16" height="16" viewBox="0 0 16 16">
+    <path d="M9.9 0.2l-0.2 1c3 0.8 5.3 3.5 5.3 6.8 0 3.9-3.1 7-7 7s-7-3.1-7-7c0-3.3 2.3-6 5.3-6.8l-0.2-1c-3.5 0.9-6.1 4.1-6.1 7.8 0 4.4 3.6 8 8 8s8-3.6 8-8c0-3.7-2.6-6.9-6.1-7.8z"></path>
+  </svg>
+</div>
+
+<script src="vendors/requirejs/require.min.js" data-main="js/config.js?_v=2017-03-19-14-31-01"></script>
+
+</body>
+</html>
