@@ -4,9 +4,9 @@ define(function (require) {
   "use strict";
 
   var
-    OpenLayers = require("OpenLayers"),
-    namespace  = require("namespace"),
-    maaametiWMS  = new OpenLayers.Layer.WMS(
+    OpenLayers  = require("OpenLayers"),
+    namespace   = require("namespace"),
+    maaametiWMS = new OpenLayers.Layer.WMS(
       "Põhikaart",
       "http://kaart.maaamet.ee/wms/kaart",
       {
