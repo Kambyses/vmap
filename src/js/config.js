@@ -11,7 +11,8 @@ require.config({
     "text":         "../../vendors/requirejs/plugins/text.min",
     "json":         "../../vendors/requirejs/plugins/json.min",
     "jquery":       "../../vendors/jquery/jquery-3.1.1.min",
-    "OL":           "../../vendors/OpenLayers/OpenLayers.debug"
+    "OL":           "../../vendors/OpenLayers/OpenLayers.debug",
+    "proj4js":      "../../vendors/proj4js/dist/proj4"
   },
 
   "shim": {

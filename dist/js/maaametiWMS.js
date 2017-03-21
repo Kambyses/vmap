@@ -1,0 +1,1 @@
+define(["require","OpenLayers","namespace"],function(e){"use strict";var a=e("OpenLayers"),r=e("namespace"),n=new a.Layer.WMS("Põhikaart","http://kaart.maaamet.ee/wms/kaart",{layers:"CORINE,BAASKAART,KAART24,HALDUSPIIRID",format:"image/png",transparent:!0},{layerId:"BAASKAART_WMS",singleTile:!0,isBaseLayer:!0,ratio:1,numZoomLevels:17});return r.append("maaametiWMS",n),n});

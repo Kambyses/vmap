@@ -1,3 +1,5 @@
+/*jslint maxlen:250*/
+
 "use strict";
 
 module.exports = function (grunt) {
@@ -88,15 +90,17 @@ module.exports = function (grunt) {
           { "src": "vendors/jquery/jquery-3.1.1.min.js",              "dest": "dist/vendors/jquery/jquery-3.1.1.min.js" },
           { "src": "vendors/OpenLayers/OpenLayers.js",                "dest": "dist/vendors/OpenLayers/OpenLayers.min.js" },
           { "src": "vendors/OpenLayers/theme/default/style.tidy.css", "dest": "dist/vendors/OpenLayers/theme/default/style.css" },
-          { "cwd": "vendors/OpenLayers/theme/default/img",            "dest": 'dist/vendors/OpenLayers/theme/default/img', "src": ["**"], "expand": true },
-          { "src": "vendors/proj4js/dist/proj4.js",                   "dest": "dist/vendors/proj4js/proj4.min.js" }
-        ],
+          { "cwd": "vendors/OpenLayers/theme/default/img",            "dest": "dist/vendors/OpenLayers/theme/default/img", "src": ["**"], "expand": true },
+          { "src": "vendors/proj4js/dist/proj4.js",                   "dest": "dist/vendors/proj4js/proj4.min.js" },
+          { "src": "vendors/fontawesome/css/font-awesome.min.css",    "dest": "dist/vendors/fontawesome/css/font-awesome.min.css" },
+          { "cwd": "vendors/fontawesome/fonts",                       "dest": "dist/vendors/fontawesome/fonts", "src": ["**"], "expand": true }
+        ]
       }
     },
 
     "replace": {
       "dist": {
-        "src":       [ "dist/index.html", "dist/js/config.js", "dist/js/OpenLayers.js" ],
+        "src":       [ "dist/index.html", "dist/js/config.js", "dist/js/app.js", "dist/js/OpenLayers.js" ],
         "overwrite": true,
         "replacements": [
           { "from": '"js/config.js"',               "to": '"js/config.js?_v=' + new Date().toISOString().replace("T", "-").replace(/:/g, "-").substr(0, 19) + '"' },
@@ -104,7 +108,7 @@ module.exports = function (grunt) {
           { "from": "../vendors/requirejs/",        "to": "vendors/requirejs/" },
           { "from": "../../vendors/",               "to": "../vendors/" },
           { "from": "OpenLayers/OpenLayers.debug",  "to": "OpenLayers/OpenLayers.min" },
-          { "from": "proj4/dist/proj4.js",          "to": "vendors/proj4/proj4.min" }
+          { "from": 'proj4js/dist/proj4"',          "to": 'proj4js/proj4.min"' }
         ]
       }
     }

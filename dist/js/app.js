@@ -1,1 +1,1 @@
-define(["require","css!../css/common.css","jquery","map"],function(s){"use strict";var c,e;s("css!../css/common.css"),e=s("jquery"),c=s("map"),e(".view-loader").hide()});
+define(["require","css!../css/common.css","css!../vendors/fontawesome/css/font-awesome.min.css","sidebar","jquery","map"],function(s){"use strict";var e,c;s("css!../css/common.css"),s("css!../vendors/fontawesome/css/font-awesome.min.css"),s("sidebar"),c=s("jquery"),e=s("map"),c(".view-loader").hide()});
